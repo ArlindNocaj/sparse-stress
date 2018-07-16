@@ -93,6 +93,20 @@ public class Options {
 		pW.println("  -h, --help, -?      - print help message");
 	}
 
+	public static void main(String[] args){
+
+		Options o=new Options();
+
+		o.setNumOfPiv(200);
+		o.setSampleStyle(SAMPLING_STYLE.KMEANS);
+		o.setFactor(1);
+		o.setNumOfIter(200);
+		o.setBC(true);
+		o.setNumPivotsMDS(200);
+		o.setNumberOfKMeansSources(200);
+		//-p 50|100|200 -s kmeans -f 1 -i 200 +b -m 200 -k 50|100|200
+	}
+
 	private void parse(String[] args) {
 		int i = 0;
 		if (args.length == 0) {
